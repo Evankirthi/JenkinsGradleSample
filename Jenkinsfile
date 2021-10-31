@@ -5,6 +5,7 @@ pipeline{
             steps{
                 script{
                     try{
+                        echo 'Inside test'
                         sh "./gradlew clean test"
                     }finally{
                     }
