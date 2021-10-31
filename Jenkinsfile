@@ -1,7 +1,7 @@
 pipeline{
      agent any
      stages{
-        stages("Clone"){
+        stage("Clone"){
             steps{
                 echo 'Inside Clone stage'
                 sh "git clone https://github.com/Evankirthi/JenkinsGradleSample.git"
