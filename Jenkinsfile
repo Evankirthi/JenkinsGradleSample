@@ -25,6 +25,17 @@ pipeline{
                 sh "./gradlew build"
              }
          }
+          stage("Build docker image"){
+              steps{
+                 echo 'Inside Build docker image'
+                 sh 'docker build -t spring-jenkins-demo .'
+              }
+          }
+          stage ('Deploy') {
+              steps {
+                  sh 'docker run -d spring-jenkins-demo'
+              }
+          }
      }
  }
 
