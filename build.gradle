@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.5.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+//	id 'application'
 }
 
 group = 'com.example'
@@ -13,6 +14,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -20,3 +22,5 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+//mainClassName = 'JenkinsProjectApplication'
