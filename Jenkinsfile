@@ -28,7 +28,7 @@ pipeline{
           }
           stage ('Deploy') {
               steps {
-                  sh 'docker run -d spring-jenkins-demo'
+                  sh 'docker run -d -p 8090:8090 spring-jenkins-demo'
               }
           }
      }
